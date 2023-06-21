@@ -32,6 +32,7 @@ body {
 
 #command-center {
   margin: 0 0.4rem;
+  margin-top: 3rem;
   width: 100%;
   max-width: 40rem;
   display: flex;
