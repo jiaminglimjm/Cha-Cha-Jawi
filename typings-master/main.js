@@ -1,9 +1,41 @@
 // Get document element
 const textDisplay = document.querySelector('#text-display');
 const inputField = document.querySelector('#input-field');
+const mytexts = {
+    mudah: [
+        "دلاڠيت يڠ ميره، رانوم سڤرتي اڠݢور، واجهمو ممبواي ميمڤيکو.",
+        "ڤاتوتکه کران کامو دبري ڤرايڠتن دان نصيحت، مک کامو مڠنچم کامي؟",
+        "ستياڤ ميڠݢو، موڽيت٢ ايت اکن مڠاداکن ڤرسمبهن دان مڠهيبورکن ڤندودوق کامڤوڠ.",
+        "کلداي ايت براس ايري هاتي دان مولا منيرو ڤرلاکوان انجيڠ ايت.",
+        "کيت تيدق ممڤو مڽمبوڽيکن سيکڤ سمولا جادي والاوڤون کيت چوبا منيرو ڤربواتن اورڠ لاءين.",
+        "ڤتاني ايت تردڠر ترياقن کلدايڽ دان چوبا اونتوق ممبنتوڽ.",
+        "مڽسل اکو بري کاو ڤينجم موتوسيکل اکو ايت. سکارڠ، تيڠوق اڤ ده جادي!",
+        "بوڠا کانچيڠ باجو تومبوه دڠن باتڠ يڠ منجالر دأتس ڤرموکاءن تانه.",
+        "ناسي جولوف اداله هيدڠن يڠ ڤاليڠ عموم دتموکن دولايه افريک بارت."
+    //end of easy
+    ],
+
+    sederhana: [
+        "بوروڠ ݢارودا برسايڤ اڤي ايت تربڠ مڠليليڠي ڤنونتون ددالم ديوان. مولوت ڤنونتون دسيتو ترڠاڠا لواس اڤابيلا مليهت مونچولڽ بوروڠ ݢرݢاسي ايت دأودارا⹁ يڠ برمولا درڤد ڤرچيقن اڤي کچيل يڠ کمودينڽ ممبنتوق سايڤ⹁ يڠ سماکين لام سماکين بسر سهيڠݢاله منجادي سأيکور ݢارودا. تيدق چوکوڤ دڠن ايت⹁ دالم سکليڤ مات⹁ ڤوهون٢ يڠ مڠهياسي ڤنتس مولا ممبسر دان منومبوهکن بوڠا٢ ڤلباݢاي ورنا سهيڠݢ جاتوه کلنتاي.",
+        "مريک برجاي ماسوق ک بيليق تيليۏيشن.  روبين سݢرا منوتوڤ ڤينتو دان مڠونچي دڠن سلق بسي. بردنتوم-دنتوم داءون ڤينتو دهنتم سسواتو. موڠکين مخلوق ايت چوبا اونتوق ماسوق، تتاڤي ڤينتو يڠ تله دسلق باتڠ بسي تيدق ممبوليهکن مريک اونتوق منچروبوه. علي دان عقيله ترمڠه-مڠه عاقبة برلاري.  روبين بيارڤون کڤنتن، ماسيه تنڠ.",
+        "ممندڠکن اي ڤندميک يڠ ممبري ايمڤک سلوروه دنيا، سموا ڤيهق، کراجاءن دان سواستا سڠݢوڤ مڽومبڠ ڤولوهن بيليون ک اتس ڤڠحاصيلن ۏکسين. بربنديڠ ڤڽاکيت لاءين، هاڽ سݢلينتير يڠ سڠݢوڤ ملابورکن دوءيت دالم اوسها سڤرتي اين. ترداڤت کولابوراسي سلوروه دنيا دري سݢي علمو، تيکنولوݢي دان کڤاکرن.",
+        "سماکين برتمبهڽ اوسيا سسأورڠ مک سماکين رنتن ڤولا اورڠ ترسبوت اونتوق ترجاڠکيت سواتو ڤڽاکيت. سبنرڽ بوکن هاڽ اورڠ توا ساج يڠ ڤرلو خواطر، ستياڤ اورڠ مولاءي دري انق٢ جوݢ هاروس سلالو وسڤادا ترهادڤ سرڠن ڤڽاکيت يڠ ممڤو داتڠ کاڤن ڤون هاڽ ساج، دڠن برتمبه اوسيا مک داي تاهن توبوه ترهادڤ ڤڽاکيت جوݢ سماکين برکورڠ اڤالاݢي دتمبه دڠن ڤولا هيدوڤ يڠ تيدق صيحت.",
+        "ايکسترک ميتانول درڤد بهاݢين داءون ڤوکوق اين جوݢ دداڤتي داڤت مڠورڠکن ڤمبنتوقن رادڠ ڤد اڠݢوتا بادن حيوان کاجين. دالم کاجين انتيرادڠ، تيکوس معمل دأروه دڠن باهن کيميا، سڤرتي کاراݢينن دان فورمالين اونتوق مڠحاصيلکن بڠکق دان ايدما ڤد کاکي دان دڠن باهن کيميا زيلينا اونتوق مڠحاصيلکن رادڠ ڤد تليڠا تيکوس.",
+        "مليهت کڤد کلمهن الترناتيف ڤرتام، لي کوان يو منچادڠکن الترناتيف کدوا. ڤد فيکيرنڽ الترناتيف کدوا بوکن سهاج داڤت ممنوهي حسرت ڤندودوق دولايه بورنيو تتاڤي جوݢ داڤت مڽلسايکن مسئله سيڠاڤورا. لي منچادڠکن ساتو ڤرستوجوان اول ڤرلو دچاڤاي مڠناءي اساس٢ ڤرلمباݢاءن ݢاݢسن مليسيا ممندڠکن ڤد اول ڤرتڠهن تاهون ١٩٦٣. ڤرلمباݢاءن سيڠاڤورا اکن دکاجي سمولا."
+    ],
+
+    sulit: [
+        "سيستم توليسن دان ايجاءن جاوي يڠ دݢوناکن دمليسيا سکارڠ اياله سيستم يڠ ترداڤت دالم بوکو ڤدومن ايجاءن جاوي يڠ دسمڤورناکن ( ڤي. إي. جيه. واي. دي. ) تربيتن راسمي ديوان بهاس دان ڤوستاک ( دي. بي. ڤي ) ڤد تاهون ١٩٨٦ (ايديسي کدوا، ١٩٨٧؛ ايديسي کتيݢ، ١٩٩٣). سيستم اين مروڤاکن سيستم ايجاءن جاوي يڠ براساسکن قاعده ايجاءن جاوي زعبا (سباݢايمان يڠ ترداڤت دالم بوکو دفتر ايجاءن ملايو جاوي-رومي، ١٩٤٩). بوکو ڤدومن ايجاءن جاوي يڠ دسمڤورناکن (١٩٨٦) دحاصيلکن درڤد روموسن کونۏينشن توليسن جاوي ڤريڠکت کبڠساءن دکوالا ترڠݢانو، يڠ دأداکن ڤد تاهون ١٩٨٤. حاصيل کونۏينشن تاهون ١٩٨٤ ايت تله دسلارسکن دان دڤرکمس دڠن معلومت يڠ دڤروليه درڤد کونۏينشن توليسن جاوي انجورن ڤوست إسلام، جابتن ڤردان منتري ڤد تاهون ١٩٩١ دان سيمينر توليسن جاوي ڤريڠکت کبڠساءن ڤد تاهون ١٩٩٣ هيڠݢ تاهون ١٩٩٤.",
+        "ايليکترون اداله ساتو ذره سوباتوم کعنصورن برجيسيم ريڠن يڠ ممباوا چس ايليکتريک نيݢاتيف. ايليکترون ممڤوڽاءي سڤين ١/٢ (فرميون)، تيدق ترليبت ددالم ساليڠتيندق قوات (ليڤتون)، دان تيدق ممڤوڽاءي سوبستروکتور. برسام دڠن نوکليوس اتوم، ايليکترون ممبينا اتوم٢؛ مريک برتڠݢوڠجواب کڤد ايکتن کيميا. ڤڠاليرن ايليکتريک دالم ڤڠالير (ڤڠکوندوکسي) ڤڤجل اداله دسببکن ڤرݢرقن ايليکترون٢. دالم سسواتو اتوم، ايليکترون مڠليليڠي نوکليوس اتوم باݢي ڤروتون دان نيوترون دالم تاتاراجه ايليکترون. ايليکترون٢ يڠ برݢرق مڠحاصيلکن اروس ايليکتريک يڠ بوليه دڤرݢوناکن اوليه اهلي٢ ساءين‌س دان جوروترا٢ اونتوق مڠوکور باڽق صيفت فيزيک. اروس ايليکتريک وجود اونتوق تيمڤوه يڠ ترباتس دان مڠحاصيلکن ايليکتريک (ڤرݢرقن چس) يڠ بوليه دمنفعتکن سباݢاي چارا يڠ ڤرکتيک اونتوق ملاکوکن کرجا.",
+        "سجومله ٢٦٥ کيس اينسيفاليتيس اکوت دڠن ١٠٥ کماتين يڠ دسببکن اوليه ۏيروس ايت دلاڤورکن دتيݢ نݢري سڤنجڠ وابق ايت. ڤيهق برکواس کصيحتن مليسيا ڤد ڤميکيرن ڤرتام اينسيفاليتيس جڤون ( جيه. أي. ) منجادي ڤڽبب اوتام جاڠکيتن يڠ منججسکن ڤڠݢوناءن لڠکه٢ برکسن اونتوق منچݢه ڤڽيبارن سبلوم اخيرڽ دکنل ڤستي اوليه سأورڠ اهلي ۏيروس تمڤتن دسببکن اوليه اݢين يڠ بارو دتوبوهکن برنام ۏيروس نيڤه، ڤڽاکيت موت سڤرتي ڤڽاکيت ۏيروس ايبولا ( إي. ۏي. دي. ) دمان اي مڽرڠ سيستم اوتق بربنديڠ دڠن يڠ مڽرڠ سالورن داره. ۏيروس ايت مولا مڽرڠ لادڠ بابي دڤيڠݢير باندر ايڤوه دڤيرق دڠن برلاکوڽ ڤڽاکيت ڤرنفسن دان اينسيفاليتيس دکالڠن بابي دمان اي دأڠݢڤ ڤرتام دسببکن اوليه جيه. إي. کران ٤ سامڤل سيروم دري ٢٨ اورڠ يڠ دجاڠکيتي کاوسن يڠ دأوجي ڤوسيتيف اونتوق ايمونوبلوبولين عيم خصوس جيه. إي. يڠ جوݢ دصحکن اوليه ڤنموان ڤوست کرجاسام ڤڽاکيت تروڤيکا ڤرتوبوهن کصيحتن سدنيا ( دبليو. ايچ. او. ) داونيۏرسيتي ناݢاساکي.",
+    ]
+    //end of sulit
+
+}
 
 // Initialize typing mode variables
-let typingMode = 'wordcount';
+let typingMode = 'difficulty';
+let typingDifficulty;
 let wordCount;
 let timeCount;
 
@@ -19,11 +51,19 @@ let punctuation = false;
 
 // Get cookies
 getCookie('theme') === '' ? setTheme('light') : setTheme(getCookie('theme'));
-getCookie('language') === '' ? setLanguage('english') : setLanguage(getCookie('language'));
-getCookie('wordCount') === '' ? setWordCount(50) : setWordCount(getCookie('wordCount'));
-getCookie('timeCount') === '' ? setTimeCount(60) : setTimeCount(getCookie('timeCount'));
-getCookie('typingMode') === '' ? setTypingMode('wordcount') : setTypingMode(getCookie('typingMode'));
+//getCookie('language') === '' ? setLanguage('english') : setLanguage(getCookie('language'));
+//getCookie('wordCount') === '' ? setWordCount(50) : setWordCount(getCookie('wordCount'));
+getCookie('typingDifficulty') === '' ? setTypingDifficulty('mudah') : setTypingDifficulty(getCookie('typingDifficulty'));
+//getCookie('timeCount') === '' ? setTimeCount(60) : setTimeCount(getCookie('timeCount'));
+//getCookie('typingMode') === '' ? setTypingMode('difficulty') : setTypingMode(getCookie('typingMode'));
 getCookie('punctuation') === '' ? setPunctuation('false') : setPunctuation(getCookie('punctuation'));
+
+
+
+
+
+
+
 
 // Find a list of words and display it to textDisplay
 function setText(e) {
@@ -68,12 +108,28 @@ function setText(e) {
           wordList.push(randomWords[n]);
         }
       }
+      break;
+
+    case 'difficulty':
+      textDisplay.style.height = 'auto';
+      textDisplay.innerHTML = '';
+      if (!keepWordList) {
+
+        sentence = mytexts[typingDifficulty][Math.floor(Math.random() * mytexts[typingDifficulty].length)];
+        wordList = sentence.split(/\s+/);
+        console.log('hi');
+      }
   }
 
   if (punctuation) addPunctuations();
   showText();
   inputField.focus();
 }
+
+
+
+
+
 
 function addPunctuations() {
   if (wordList[0] !== undefined) {
@@ -106,6 +162,11 @@ function addPunctuations() {
   }
 }
 
+
+
+
+
+
 // Display text to textDisplay
 function showText() {
   wordList.forEach(word => {
@@ -115,6 +176,10 @@ function showText() {
   });
   textDisplay.firstChild.classList.add('highlight');
 }
+
+
+
+
 
 // Key is pressed in input field
 inputField.addEventListener('keydown', e => {
@@ -143,6 +208,10 @@ inputField.addEventListener('keydown', e => {
   if (currentWord === 0 && inputField.value === '') {
     switch (typingMode) {
       case 'wordcount':
+        startDate = Date.now();
+        break;
+
+      case 'difficulty':
         startDate = Date.now();
         break;
 
@@ -212,6 +281,13 @@ inputField.addEventListener('keydown', e => {
   }
 });
 
+
+
+
+
+
+
+
 // Calculate and display result
 function showResult() {
   let words, minute, acc;
@@ -219,7 +295,7 @@ function showResult() {
     case 'wordcount':
       words = correctKeys / 5;
       minute = (Date.now() - startDate) / 1000 / 60;
-      let totalKeys = -1;
+      //let totalKeys = -1;
       wordList.forEach(e => (totalKeys += e.length + 1));
       acc = Math.floor((correctKeys / totalKeys) * 100);
       break;
@@ -232,9 +308,19 @@ function showResult() {
         sumKeys += wordList[i].length + 1;
       }
       acc = acc = Math.min(Math.floor((correctKeys / sumKeys) * 100), 100);
+      break;
+
+    case 'difficulty':
+      words = correctKeys / 5;
+      minute = (Date.now() - startDate) / 1000 / 60;
+      let totalKeys = -1;
+      wordList.forEach(e => (totalKeys += e.length + 1));
+      acc = Math.floor((correctKeys / totalKeys) * 100);
+      console.log(words, minute, words/minute);
+
   }
-  let wpm = Math.floor(words / minute);
-  document.querySelector('#right-wing').innerHTML = `WPM: ${wpm} / ACC: ${acc}`;
+  let wpm = Math.floor(correctKeys/5 / minute);
+  document.querySelector('#right-wing').innerHTML = `<b>WPM: ${wpm}</b> / کتڤتن: ${acc}%`;
 }
 
 // Command actions
@@ -245,6 +331,8 @@ document.addEventListener('keydown', e => {
     if (e.key === 't') {
       setTheme(inputField.value);
     }
+
+    /*
     // [mod + l] => Change the language
     if (e.key === 'l') {
       setLanguage(inputField.value);
@@ -254,6 +342,7 @@ document.addEventListener('keydown', e => {
     if (e.key === 'm') {
       setTypingMode(inputField.value);
     }
+    */
 
     // [mod + p] => Change punctuation active
     if (e.key === 'p') {
@@ -268,6 +357,12 @@ document.addEventListener('keydown', e => {
     setText(e);
   }
 });
+
+
+
+
+
+
 
 function setTheme(_theme) {
   const theme = _theme.toLowerCase();
@@ -289,6 +384,11 @@ function setTheme(_theme) {
     .catch(err => console.error(err));
 }
 
+
+
+
+
+/*
 function setLanguage(_lang) {
   const lang = _lang.toLowerCase();
   fetch('texts/random.json')
@@ -313,7 +413,12 @@ function setLanguage(_lang) {
     })
     .catch(err => console.error(err));
 }
+*/
 
+
+
+
+/*
 function setTypingMode(_mode) {
   const mode = _mode.toLowerCase();
   switch (mode) {
@@ -331,10 +436,22 @@ function setTypingMode(_mode) {
       document.querySelector('#time-count').style.display = 'inline';
       setText();
       break;
+    case 'typingDifficulty':
+      typingMode = mode;
+      setCookie('typingMode', mode, 90);
+      document.querySelector('#word-count').style.display = 'none';
+      document.querySelector('#time-count').style.display = 'none';
+      document.querySelector('#difficulties').style.display = 'inline';
+      setText();
+      break;
     default:
       console.error(`mode ${mode} is undefine`);
   }
 }
+*/
+
+
+
 
 function setPunctuation(_punc) {
   const punc = _punc.toLowerCase();
@@ -349,6 +466,10 @@ function setPunctuation(_punc) {
   }
 }
 
+
+
+
+/*
 function setWordCount(wc) {
   setCookie('wordCount', wc, 90);
   wordCount = wc;
@@ -356,6 +477,17 @@ function setWordCount(wc) {
   document.querySelector(`#wc-${wordCount}`).style.borderBottom = '2px solid';
   setText();
 }
+*/
+function setTypingDifficulty(difficulty) {
+  setCookie('typingDifficulty', difficulty, 90);
+  typingDifficulty = difficulty;
+  document.querySelectorAll('#difficulties > span').forEach(e => (e.style.borderBottom = ''));
+  document.querySelector(`#df-${difficulty}`).style.borderBottom = '2px solid';
+  setText();
+}
+
+
+
 
 function setTimeCount(tc) {
   setCookie('timeCount', tc, 90);
@@ -368,12 +500,22 @@ function setTimeCount(tc) {
   setText();
 }
 
+
+
+
+
+
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = 'expires=' + d.toUTCString();
   document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
 }
+
+
+
+
+
 
 function getCookie(cname) {
   var name = cname + '=';
@@ -455,5 +597,3 @@ function hideThemeCenter() {
   document.getElementById('theme-center').classList.add('hidden');
   document.getElementById('command-center').classList.remove('hidden');
 }
-
-
