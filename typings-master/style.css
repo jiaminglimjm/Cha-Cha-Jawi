@@ -21,6 +21,7 @@ body {
 .bar {
   display: flex;
   justify-content: space-between;
+  font-family: Noto Naskh Arabic;
 }
 
 #header {
@@ -85,7 +86,8 @@ body {
 
 #text-display {
   margin-bottom: 1rem;
-  overflow: hidden;
+    max-height: 14rem;  /* Or any height that suits your design */
+    overflow-y: auto;   /* Enables vertical scrolling */
   font-size: 1.5rem;
 }
 
