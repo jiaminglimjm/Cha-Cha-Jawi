@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="icon" href="favicon.png">
+  <title>Malay Rumi-Jawi Converter</title>
+  <script defer src="static/rumi-jawi.js"></script>
+  <script defer src="static/main.js"></script>
+</head>
+
+<body>
+  <div class="top">
+    <header>
+      <h1>Malay Rumi-Jawi Converter</h1>
+    </header>
+    <nav>
+      <a class="at" href="index.html">Home</a>
+      &bull;
+      <a href="about.html">About Rumi and Jawi</a>
+      &bull;
+      <a href="qa.html">Q & A</a>
+      &bull;
+      <a href="details.html">Technical Details</a>
+    </nav>
+  </div>
+
+  <main>
+    <textarea id="input" placeholder="Enter text here"></textarea>
+    <div><span id="direction">Rumi to Jawi</span> &mdash; <span id="directionToggle">Switch Direction</span></div>
+    <div class="outputArea">
+      <div class="info">
+        <span class="label">Original:</span><span id="original"></span>
+        <span class="label">Conversions:</span><div id="conversions"></div>
+      </div>
+      <p id="output"></p>
+    </div>
+  </main>
+
+</body>
+
+</html>
