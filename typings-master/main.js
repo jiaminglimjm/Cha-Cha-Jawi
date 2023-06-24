@@ -22,7 +22,7 @@ const mytexts = {
         "چينتا دان کاسيه سايڠ يڠ دداسري دڠن کتلوسن هاتي تق اکن ڤرنه اد هابيسڽ.",
         "اومبق مموتيه درنتاو ڤنجڠ⹁ کاڤل برلاير دلاٴوت بيرو. سماکين کاسيه سماکين سايڠ⹁ ترايڠين بنر هندق برتمو.",
         "اد باڽق بواه تتاڤي تيدق سمواڽ باٴيق دان باڽق علمو ڤڠتاهوان تتاڤي تيدق سمواڽ برݢونا.",
-        "کماجوان ڤرلاهن لبيه باٴيق درڤد تيدق ڤوڽا کماجوان لڠسوڠ.",
+        "ڤوڽا کماجوان ڤرلاهن لبيه باٴيق درڤد تيدق ڤوڽا کماجوان لڠسوڠ.",
         "کݢاݢلن بوکنله کݢاݢلن يڠ سبنرڽ کچوالي جک کيت تيدق بلاجر درڤداڽ.",
         "ماسق کوڤي اٴيرڽ منته⹁ کمبڠ ملاتي اتس کارڠ. ساي برميمڤي کريسکو ڤاته⹁ جنتوڠ هاتي دأمبيل اورڠ.",
         "ارنب اتاو کلينچي موده دکنلي دڠن تليڠاڽ يڠ ڤنجڠ دان تيروس.",
@@ -47,7 +47,7 @@ const mytexts = {
         "بوروڠ ݢارودا برسايڤ اڤي ايت تربڠ مڠليليڠي ڤنونتون ددالم ديوان. مولوت ڤنونتون دسيتو ترڠاڠا لواس اڤابيلا مليهت مونچولڽ بوروڠ ݢرݢاسي ايت دأودارا.",
         "ممندڠکن اي ڤندميک يڠ ممبري ايمڤک سلوروه دنيا⹁ سموا ڤيهق⹁ کراجاٴن دان سواستا سڠݢوڤ مڽومبڠ ڤولوهن بيليون کأتس ڤڠحاصيلن ۏکسين.",
         "سماکين برتمبهڽ اوسيا سسأورڠ مک سماکين رنتن ڤولا اورڠ ترسبوت اونتوق ترجاڠکيت سواتو ڤڽاکيت. سبنرڽ⹁ بوکن هاڽ اورڠ توا ساج يڠ ڤرلو خواطير.",
-        "اخلاسله منجادي ديري سنديري اݢر هيدوڤ ڤنوه دڠن کتلوسن دان کأمانن. هيدوڤ تنڤا ڤݢڠن عبارت بوٴيه٢ سابون. بيلا‌٢ ماس اي اکن ڤچه.",
+        "اخلاسله منجادي ديري سنديري اݢر هيدوڤ ڤنوه دڠن کتلوسن دان کأمانن. هيدوڤ تنڤا ڤݢڠن عبارت بوٴيه٢ سابون. بيلا٢ ماس اي اکن ڤچه.",
         "نوسنتارا اداله ايستيله بهاس کاوي وجود ڤد زمان مجاڤاهيت دڤرينته ڤڠليما ݢاجه مادا مروجوع کڤد ݢوݢوسن ڤولاو مڠليليڠي ڤولاو جاوا دلاٴوتن اسيا تڠݢارا يڠ منجادي ڤوست کراجاٴن ترسبوت زمان ايت.",
     ],
 
@@ -56,7 +56,7 @@ const mytexts = {
         "ايليکترون اداله ساتو ذره سوباتوم کعنصورن برجيسيم ريڠن يڠ ممباوا چس ايليکتريک نيݢاتيف. ايليکترون ممڤوڽاٴي سڤين ١/٢ (فرميون)⹁ تيدق ترليبت ددالم ساليڠتيندق قوات (ليڤتون)⹁ دان تيدق ممڤوڽاٴي سوبستروکتور. برسام دڠن نوکليوس اتوم⹁ ايليکترون ممبينا اتوم٢⁏ مريک برتڠݢوڠجواب کڤد ايکتن کيميا.",
         "سجومله ٢٦٥ کيس اينسيفاليتيس اکوت دڠن ١٠٥ کماتين يڠ دسببکن اوليه ۏيروس ايت دلاڤورکن دتيݢ نݢري سڤنجڠ وابق ايت. ڤيهق برکواس کصيحتن مليسيا ڤد ڤميکيرن ڤرتام اينسيفاليتيس جڤون ( جيه. أي. ) منجادي ڤڽبب اوتام جاڠکيتن يڠ منججسکن ڤڠݢوناٴن لڠکه٢ برکسن اونتوق منچݢه ڤڽيبارن سبلوم اخيرڽ دکنل ڤستي اوليه سأورڠ اهلي ۏيروس تمڤتن دسببکن اوليه اݢين يڠ بارو دتوبوهکن برنام ۏيروس نيڤه⹁ ڤڽاکيت موت سڤرتي ڤڽاکيت ۏيروس ايبولا ( إي. ۏي. دي. ) دمان اي مڽرڠ سيستم اوتق بربنديڠ دڠن يڠ مڽرڠ سالورن داره.",
         "ايکسترک ميتانول درڤد بهاݢين داٴون ڤوکوق اين جوݢ دداڤتي داڤت مڠورڠکن ڤمبنتوقن رادڠ ڤد اڠݢوتا بادن حيوان کاجين. دالم کاجين انتيرادڠ⹁ تيکوس معمل دأروه دڠن باهن کيميا⹁ سڤرتي کاراݢينن دان فورمالين اونتوق مڠحاصيلکن بڠکق دان ايدما ڤد کاکي دان دڠن باهن کيميا زيلينا اونتوق مڠحاصيلکن رادڠ ڤد تليڠا تيکوس.",
-        "اونيۏرسيتي ساٴين‌س مليسيا مروڤاکن سبواه اونيۏرسيتي عوام دمليسيا. کمڤوس اوتامڽ ترلتق دجورج تاٴون⹁ ڤولاو ڤينڠ. ترداڤت تيݢ بواه کمڤوس لاٴين ياٴيت سبواه دسبرڠ ڤراي دان سبواه لاݢي دکلنتن دان سبواه کمڤوس لوار نݢارا يڠ مناورکن کورسوس ساٴين‌س ڤراوبتن داوتر ڤراديش⹁ اينديا. يو.ايس.عيم. ممڤوڽاٴي جومله ڤلاجر سکيتر ٢٩٧٨٩ اورڠ ڤد ٢٠٠٦. حال اين منجاديکنڽ اي سبواه اونيۏرسيتي تربسر دمليسيا دري سݢي بيلڠن ڤلاجر.",
+        "اونيۏرسيتي ساٴين‌س مليسيا مروڤاکن سبواه اونيۏرسيتي عوام دمليسيا. کمڤوس اوتاماڽ ترلتق دجورج تاٴون⹁ ڤولاو ڤينڠ. ترداڤت تيݢ بواه کمڤوس لاٴين ياٴيت سبواه دسبرڠ ڤراي دان سبواه لاݢي دکلنتن دان سبواه کمڤوس لوار نݢارا يڠ مناورکن کورسوس ساٴين‌س ڤراوبتن دأوتر ڤراديش⹁ اينديا. يو.ايس.عيم. ممڤوڽاٴي جومله ڤلاجر سکيتر ٢٩٧٨٩ اورڠ ڤد ٢٠٠٦. حال اين منجاديکنڽ اي سبواه اونيۏرسيتي تربسر دمليسيا دري سݢي بيلڠن ڤلاجر.",
     ]
     //end of sulit
 
@@ -219,7 +219,7 @@ function normalizeJawi(s) {
 }
 
 // Key is pressed in input field
-inputField.addEventListener('keydown', e => {
+inputField.addEventListener('input', e => {
   // Add wrong class to input field
   switch (typingMode) {
     case 'wordcount':
@@ -230,40 +230,41 @@ inputField.addEventListener('keydown', e => {
       if (currentWord < wordList.length) inputFieldClass();
   }
   function inputFieldClass() {
-
-    if (e.key === 'Backspace') {
-      let inputWordSlice = e.ctrlKey ? '' : inputField.value.slice(0, inputField.value.length - 1);
-      inputWordSlice = normalizeJawi(inputWordSlice);
-      let currentWordSlice = wordList[currentWord].slice(0, inputWordSlice.length);
-      inputField.className = inputWordSlice === currentWordSlice ? '' : 'wrong';
-    }
-
-    else if (e.key === ' ') {
-      inputField.className = '';
-    }
-
-    // woww novel bug fix! move the if to become an else and it works for jawi!
-    else if (e.key !== 'Shift' && e.key !== 'Alt' && e.key !== 'Control' && e.key !== 'Enter' && e.key !== 'Meta') {
-      let inputWordSlice = inputField.value + e.key;
-      inputWordSlice = normalizeJawi(inputWordSlice);
-      let currentWordSlice = wordList[currentWord].slice(0, inputWordSlice.length);
-      inputField.className = inputWordSlice === currentWordSlice ? '' : 'wrong';
-    }
+    let inputValue = inputField.value;  // get the current input value
+    inputValue = normalizeJawi(inputValue);
+    let currentWordSlice = wordList[currentWord].slice(0, inputValue.length);
+    inputField.className = inputValue === currentWordSlice ? '' : 'wrong';
   }
+//  function inputFieldClass() {
+//
+//    if (e.key === 'Backspace') {
+//      let inputWordSlice = e.ctrlKey ? '' : inputField.value.slice(0, inputField.value.length - 1);
+//      inputWordSlice = normalizeJawi(inputWordSlice);
+//      let currentWordSlice = wordList[currentWord].slice(0, inputWordSlice.length);
+//      inputField.className = inputWordSlice === currentWordSlice ? '' : 'wrong';
+//    }
+//
+//    else if (e.key === ' ') {
+//      inputField.className = '';
+//    }
+//
+//    // woww novel bug fix! move the if to become an else and it works for jawi!
+//    else if (e.key !== 'Shift' && e.key !== 'Alt' && e.key !== 'Control' && e.key !== 'Enter' && e.key !== 'Meta') {
+//      let inputWordSlice = inputField.value + e.key;
+//      inputWordSlice = normalizeJawi(inputWordSlice);
+//      let currentWordSlice = wordList[currentWord].slice(0, inputWordSlice.length);
+//      inputField.className = inputWordSlice === currentWordSlice ? '' : 'wrong';
+//    }
+//  }
+
+});
+
+inputField.addEventListener('keydown', e => {
 
   // If it is the first character entered
   if (currentWord === 0 && inputField.value === '') {
-    switch (typingMode) {
-      case 'wordcount':
-        startDate = Date.now();
-        break;
+    startDate = Date.now();
 
-      case 'difficulty':
-        startDate = Date.now();
-        break;
-
-
-    }
   }
 
   // If it is the space key check the word and add correct/wrong class
@@ -319,36 +320,16 @@ inputField.addEventListener('keydown', e => {
 // Calculate and display result
 function showResult() {
   let words, minute, acc;
-  switch (typingMode) {
-    case 'wordcount':
+
       words = correctKeys / 5;
       minute = (Date.now() - startDate) / 1000 / 60;
-      //let totalKeys = -1;
-      wordList.forEach(e => (totalKeys += e.length + 1));
-      acc = Math.floor((correctKeys / totalKeys) * 100);
-      break;
-
-    case 'time':
-      words = correctKeys / 5;
-      minute = timeCount / 60;
-      let sumKeys = -1;
-      for (i = 0; i < currentWord; i++) {
-        sumKeys += wordList[i].length + 1;
-      }
-      acc = acc = Math.min(Math.floor((correctKeys / sumKeys) * 100), 100);
-      break;
-
-    case 'difficulty':
-      words = correctKeys / 5;
-      minute = (Date.now() - startDate) / 1000 / 60;
-      let totalKeys = 0;
+      let totalKeys = -1;
       wordList.forEach(e => (totalKeys += e.length + 1));
       acc = Math.floor((correctKeys / totalKeys) * 100);
       console.log(words, minute, words/minute);
 
-  }
   let wpm = Math.floor(correctKeys/5 / minute);
-  document.querySelector('#right-wing').innerHTML = `<b>WPM: ${wpm}</b> / کتڤتن: ${acc}%`;
+  document.querySelector('#right-wing').innerHTML = `<b>WPM: ${wpm}</b> | کتڤتن: ${acc}`;
 }
 
 // Command actions
@@ -511,7 +492,7 @@ function setTypingDifficulty(difficulty) {
   typingDifficulty = difficulty;
   document.querySelectorAll('#difficulties > span').forEach(e => (e.style.borderBottom = ''));
   document.querySelector(`#df-${difficulty}`).style.borderBottom = '2px solid';
-  document.querySelector('#right-wing').innerHTML = 'WPM: XX | کتڤتن: XX%';
+  document.querySelector('#right-wing').innerHTML = 'WPM: XX | کتڤتن: XX';
   setText();
 }
 
