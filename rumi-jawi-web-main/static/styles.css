@@ -13,8 +13,9 @@ h1 {
   margin: 0;
 }
 main {
-  width: 640px;
+  max-width: 640px;
   margin: 20px auto;
+  padding: 0 10px; /* added padding for smaller screens */
 }
 
 .top {
@@ -27,16 +28,18 @@ nav li {
   display: inline-block;
   list-style: none;
 }
+
 nav a {
   font-weight: bold;
   text-decoration: none;;
 }
+
 nav a.at { text-decoration: underline; }
+
 nav a:link { color: #F24E67; }
 nav a:visited { color: #F24E67; }
 nav a:hover { color: #ff8598; }
 nav a:active { color: #942939; }
-
 
 #input,#output{
   font-family: inherit;
@@ -49,6 +52,7 @@ nav a:active { color: #942939; }
   min-height: 180px;
   text-align: start;
   background-color: #fafafa;
+  box-sizing: border-box; /* to include padding and border in element's total width */
 }
 #input {
   direction: ltr;
@@ -63,7 +67,6 @@ nav a:active { color: #942939; }
 
 span.token:hover {
   background-color: #ccc;
-  /* border: 1px solid #ccc; */
   border-radius: 4px;
   cursor: pointer;
 }
@@ -118,3 +121,24 @@ article h3 a:link { color:initial; }
 article h3 a:visited { color:initial; }
 article h3 a:hover { color:initial; }
 article h3 a:active { color:initial; }
+
+/* Media Queries */
+
+/* For tablet to mobile screens */
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: 0.8em;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  main {
+    padding: 0 20px;
+  }
+
+  .top {
+    padding: 10px;
+  }
+}
