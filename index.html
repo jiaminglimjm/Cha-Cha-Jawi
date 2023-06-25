@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cha Cha Jawi</title>
+    <style>
+
+        h1 {
+            justify-content:center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .box h2 {
+            margin: 0;
+        }
+
+        .box p {
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 80%;
+            }
+        }
+
+        #progressBar {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 13px;
+        }
+
+        #progressBar div {
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 13px;
+            width: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+        }
+
+
+
+
+        .locked {
+            position: relative;
+        }
+
+        .locked::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(lock.png) center center no-repeat, rgba(0,0,0,0.5);
+            background-size: 50px, cover;
+        }
+
+    </style>
+</head>
+<body dir=rtl>
+
+    <script>
+    window.onload = function() {
+        if (!checkCookie()) {
+            var boxes = document.getElementsByClassName('box');
+            for (var i = 0; i < boxes.length; i++) {
+                boxes[i].classList.add('locked');
+            }
+        }
+    };
+
+    function checkCookie() {
+        var name = "access=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length) == 'true';
+            }
+        }
+        return false;
+    }
+
+    </script>
+
+    <center><h1>
+        چاچاجاوي!!
+    </h1></center>
+
+    <div class="container">
+        <!-- Include your links here. Repeat this div for multiple links -->
+        <div class="box">
+            <img src="app_image.jpg" alt="App Image">
+            <h2>App Title</h2>
+            <p>Short description of the app.</p>
+            <a href="old_version_link">Old Version</a>
+        </div>
+
+        <div class="box">
+            <img src="app_image.jpg" alt="App Image">
+            <h2>App Title</h2>
+            <p>Short description of the app.</p>
+            <a href="old_version_link">Old Version</a>
+        </div>
+
+        <div class="box">
+            <img src="app_image.jpg" alt="App Image">
+            <h2>App Title</h2>
+            <p>Short description of the app.</p>
+            <a href="old_version_link">Old Version</a>
+        </div>
+
+        <div class="box">
+            <img src="app_image.jpg" alt="App Image">
+            <h2>App Title</h2>
+            <p>Short description of the app.</p>
+            <a href="old_version_link">Old Version</a>
+        </div>
+    </div>
+
+    <!-- Fundraising progress bar -->
+    <div id="progressBar">
+        <div id="progress"></div>
+        <p id="textprogress"></p>
+    </div>
+
+    <footer>
+        <!-- Include your contact details here -->
+        <p>Hubungi: jiaminglimjm@gmail.com</p>
+        <p dir=ltr>Twitter: <a href="https://twitter.com/__jiaming__"> @__jiaming__ </p>
+    </footer>
+
+    <script>
+        // Use this function to update the progress bar
+        function updateProgressBar(amount) {
+            var progress = document.getElementById("progress");
+            var percentage = (amount / 500) * 100;
+            progress.style.width = percentage + "%";
+            document.getElementById("textprogress") = "";
+        }
+
+        // Call the function with the current amount
+        updateProgressBar(0);
+    </script>
+</body>
+</html>
