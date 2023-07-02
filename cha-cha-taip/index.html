@@ -18,8 +18,35 @@
     <link rel="stylesheet" href="style.css" />
     <link id="theme" rel="stylesheet" href="themes/light.css" />
     <link rel="icon" href="../images/favicon.png" type="image/png">
+
+    <script>
+    function getCookie(cname) {
+      var name = cname + '=';
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return '';
+    }
+    function checkGavePass() {
+        // Check if the cookie is present in the list of all cookies
+        if (getCookie("ccj-access")!="gavepass") {
+            // If cookie is not found, redirect to another page
+            window.location.href = "../";
+        }
+    }
+    </script>
   </head>
-  <body dir=rtl>
+
+
+  <body dir=rtl onload="checkGavePass();">
     <h2 id="header">چاچاتاٴيــڤ!!</h2>
 
     <div id="command-center" class="">

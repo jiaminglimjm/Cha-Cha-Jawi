@@ -139,32 +139,43 @@
 <body dir=ltr>
 
     <script>
-    /**
+
+    function unlockApp() {
+        var boxes = document.getElementsByClassName('box');
+        // change number when app is released
+        for (var i = 0; i < 1; i++) {
+            boxes[i].children[0].classList.remove('locked');
+        }
+    }
+
+    /**/
     window.onload = function() {
-        if (!checkCookie()) {
-            var boxes = document.getElementsByClassName('box');
-            for (var i = 0; i < boxes.length; i++) {
-                boxes[i].classList.add('locked');
-            }
+        if (getCookie("ccj-access")==="gavepass") {
+            unlockApp();
         }
     };
 
     /**/
-
-    function checkCookie() {
-        var name = "access=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length) == 'true';
-            }
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+      var expires = 'expires=' + d.toUTCString();
+      document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+    }
+    function getCookie(cname) {
+      var name = cname + '=';
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
         }
-        return false;
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return '';
     }
 
     </script>
@@ -180,8 +191,30 @@
         <p>
             Kemajuan fundraiser: RM&nbsp;0&nbsp;/&nbsp;RM&nbsp;500 (Anda boleh menyumbang di <a target="_blank" href="https://forms.gle/bBzsqKuUbevGpgmY7">https://forms.gle/bBzsqKuUbevGpgmY7</a>)
         </p>
+
         <div id="progress"></div>
-        <p id="textprogress"></p>
+
+        <br/>
+        <form id="myForm" onsubmit="event.preventDefault(); checkPassword();">
+          Kata laluan:
+          <input type="text" id="password" autocomplete="off" style="-webkit-text-security: disc;">
+          <input type="submit" value="Submit">
+        </form>
+
+        <script>
+          function checkPassword() {
+            const password = document.getElementById('password').value;
+            if (password === "ilovejawi6789") {
+                setCookie("ccj-access", "gavepass", 365);
+                alert("تريما کاسيه! هارڤ برمنفعت دان مڽرونوقکن!");
+                unlockApp();
+            } else {
+                alert("معاف⹁ کات لالوان ايت ساله...")
+            }
+          }
+        </script>
+
+
     </div>
 
     <script>
@@ -190,7 +223,6 @@
             var progress = document.getElementById("progress");
             var percentage = (amount / 500) * 100;
             progress.style.width = percentage + "%";
-            document.getElementById("textprogress") = "";
         }
 
         // Call the function with the current amount
@@ -202,7 +234,7 @@
     <div class="container">
 
         <div class="box">
-            <div class="innerbox">
+            <div class="locked innerbox">
                 <a href="http://chachajawi.xyz/cha-cha-taip">
                     <img src="images/chachataip.png">
                     <h2>Cha-Cha-Taip / چاچاتاٴيـڤ</h2>
