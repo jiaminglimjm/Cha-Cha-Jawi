@@ -2,43 +2,61 @@
 <html>
 <head>
     <title>Cha Cha Jawi</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <style>
 
-        h1 {
-            justify-content:center;
+        @font-face {
+            font-family: DejawiVu Sans Mono;
+            src: url(./typings-master/DejawiVuSansMono-v1.0.ttf) format("truetype");
+        }
+
+        body {
+            font-family: DejawiVu Sans Mono, Sans;
+        }
+
+        .chachahead {
+            width: 30rem;
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            width: 70%;
+            margin: auto;
         }
 
         .box {
             margin: 15px;
-            width: 300px;
+            width: calc(50% - 30px); /* 50% for 2 columns, -30px to account for the left and right margins */
+            text-align: right;
+        }
+
+        .innerbox {
             text-align: center;
         }
 
-        .box img {
+        .innerbox img {
             width: 100%;
+            overflow: hidden;
         }
 
-        .box h2 {
+        .innerbox h2 {
             margin: 0;
         }
 
-        .box p {
+        .innerbox p {
             margin: 0;
         }
 
         @media only screen and (max-width: 600px) {
             .container {
                 flex-direction: column;
+                width: 90%;
             }
 
             .box {
-                width: 80%;
+                width: 90%; /* For smaller screens (mobile), use a larger width to have only 1 column */
+                margin: 15px auto; /* Horizontally center the box on small screens */
             }
         }
 
@@ -75,15 +93,38 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url(lock.png) center center no-repeat, rgba(0,0,0,0.5);
-            background-size: 50px, cover;
+            background: url(images/lock-icon-transparent-22.png) center center no-repeat, rgba(0,0,0,0.3);
+            background-size: 100px, cover;
+        }
+
+        #progressBar {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .oldlink {
+            text-align: right;
+            margin-right: 5px;
+        }
+
+        @keyframes hueRotate {
+            0% { background-color: hsl(0, 75%, 42%); }
+            25% { background-color: hsl(90, 65%, 40%); }
+            50% { background-color: hsl(180, 65%, 40%); }
+            75% { background-color: hsl(270, 75%, 42%); }
+            100% { background-color: hsl(360, 75%, 42%); }
+        }
+
+        #funky {
+            animation: hueRotate 10s infinite linear;
         }
 
     </style>
 </head>
-<body dir=rtl>
+<body dir=ltr>
 
     <script>
+    /**
     window.onload = function() {
         if (!checkCookie()) {
             var boxes = document.getElementsByClassName('box');
@@ -92,6 +133,8 @@
             }
         }
     };
+
+    /**/
 
     function checkCookie() {
         var name = "access=";
@@ -111,46 +154,59 @@
 
     </script>
 
-    <center><h1>
-        چاچاجاوي!!
-    </h1></center>
+    <center>
+        <img class="chachahead" src="images/chachajawi.png" />
+    </center>
 
-    <div class="container">
-        <!-- Include your links here. Repeat this div for multiple links -->
-        <div class="box">
-            <img src="app_image.jpg" alt="App Image">
-            <h2>App Title</h2>
-            <p>Short description of the app.</p>
-            <a href="old_version_link">Old Version</a>
-        </div>
-
-        <div class="box">
-            <img src="app_image.jpg" alt="App Image">
-            <h2>App Title</h2>
-            <p>Short description of the app.</p>
-            <a href="old_version_link">Old Version</a>
-        </div>
-
-        <div class="box">
-            <img src="app_image.jpg" alt="App Image">
-            <h2>App Title</h2>
-            <p>Short description of the app.</p>
-            <a href="old_version_link">Old Version</a>
-        </div>
-
-        <div class="box">
-            <img src="app_image.jpg" alt="App Image">
-            <h2>App Title</h2>
-            <p>Short description of the app.</p>
-            <a href="old_version_link">Old Version</a>
-        </div>
-    </div>
-
-    <!-- Fundraising progress bar -->
     <div id="progressBar">
+        <p>
+            Kemajuan fundraiser: RM 0 / RM 500 &nbsp; (Anda boleh menyumbang di <a target="_blank" href="https://forms.gle/bBzsqKuUbevGpgmY7">https://forms.gle/bBzsqKuUbevGpgmY7</a>)
+        </p>
         <div id="progress"></div>
         <p id="textprogress"></p>
     </div>
+
+    <div class="container">
+
+        <div class="box">
+            <div class="innerbox">
+                <a href="http://chachajawi.xyz/typings-master/index.html">
+                    <img src="images/chachataip.png">
+                    <h2>Cha-Cha-Taip / چاچاتاٴيـڤ</h2>
+                </a>
+                <p>Ujian kelajuan menaip dalam Jawi.<br/><i><a href="http://chachajawi.xyz/typings-master/index.html">Cuba sekarang</a></i>!</p>
+            </div>
+            <a class="oldlink" href="https://jiaminglimjm.github.io/Ujian-Menaip-Jawi/" target="_blank">>>Versi lama</a>
+        </div>
+
+        <div class="box">
+            <div class="locked innerbox">
+                <div id="funky"><img src="images/rumi-jawi.gif" alt="App Image"></div>
+                <h2>Penukar Rumi-Jawi</h2>
+                <p>Ejaan berdasarkan DBP + menambah ejaan custom sendiri!<br/>Akan dikeluarkan pada <b><i>Rabu, 5 Julai 2023</i></b>!!</p>
+            </div>
+            <a class="oldlink" href="https://goodmami.org/rumi-jawi-web/" target="_blank">>>Versi goodmami</a>
+        </div>
+
+        <div class="box">
+            <div class="locked innerbox">
+                <a href="./"><img src="images/chatekata-2.png"></a>
+                <h2>Chatekata / چاتکات</h2>
+                <p>Wordle Jawi lanjut takterhingga.<br/>Akan dikeluarkan pada <b><i>Jumaat, 7 Julai 2023</i></b>!!</p>
+            </div>
+            <a href="https://katadel.vercel.app" target="_blank">>>Versi lama "کاتادل"</a>
+        </div>
+
+        <div class="box">
+            <div class="locked innerbox">
+                <img src="images/zelda.png">
+                <h2>Permainan aksi penjelajahan terjemahan jawi pertama!!</h2>
+                <p dir=rtl>"لاݢيندا زيلدا: توڤي مينيش" اکن دکلوارکن ڤد سواتو هاري ننتي...</p>
+            </div>
+        </div>
+    </div>
+
+    <p>تريما کاسيه! هارڤ برمنفعت دان مڽرونوقکن!</p>
 
     <footer>
         <!-- Include your contact details here -->
@@ -168,7 +224,7 @@
         }
 
         // Call the function with the current amount
-        updateProgressBar(0);
+        updateProgressBar(6);
     </script>
 </body>
 </html>
