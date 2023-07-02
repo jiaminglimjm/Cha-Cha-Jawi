@@ -139,3 +139,19 @@ body, #header, #left-wing, #right-wing, #typing-area, #theme-area, #theme-center
   transition: all .4s ease-in-out 0s;
 
 }
+
+#title-bar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#back-button {
+  text-decoration: none;
+  color: #000;  /* Change this to match your site's color scheme */
+  font-size: 1.2em;  /* Change this to adjust the size of the text */
+  padding: 5px 10px;  /* This adds some space around the text */
+  margin-right: 20px;  /* This adds some space between the button and the title */
+  position: absolute;
+  right: 10px;
+}
