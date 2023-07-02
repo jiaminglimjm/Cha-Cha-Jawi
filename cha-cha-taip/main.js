@@ -209,7 +209,7 @@ function showText() {
 
 
 function normalizeJawi(s) {
-    var replacedString = s.replace(/ك/g, 'ک');
+    var replacedString = s.trim().replace(/ك/g, 'ک');
     replacedString = replacedString.replace(/ڬ/g, 'ݢ');
     replacedString = replacedString.replace(/ء/g, 'ٴ');
     replacedString = replacedString.replace(/،/g, '⹁');
@@ -232,7 +232,9 @@ inputField.addEventListener('input', e => {
     let inputValue = inputField.value;  // get the current input value
     inputValue = normalizeJawi(inputValue);
     let currentWordSlice = wordList[currentWord].slice(0, inputValue.length);
-    inputField.className = inputValue === currentWordSlice ? '' : 'wrong';
+    if (currentWordSlice.length > 1) {
+        inputField.className = inputValue === currentWordSlice ? '' : 'wrong';
+    }
   }
 //  function inputFieldClass() {
 //
@@ -259,30 +261,22 @@ inputField.addEventListener('input', e => {
 });
 
 inputField.addEventListener('keydown', e => {
-
   // If it is the first character entered
   if (currentWord === 0 && inputField.value === '') {
     startDate = Date.now();
-
   }
+});
 
+
+inputField.addEventListener('input', e => {
   // If it is the space key check the word and add correct/wrong class
-  if (e.key === ' ') {
+  if (inputField.value.slice(-1) == ' ') {
     e.preventDefault();
 
     if (inputField.value !== '') {
-      // Scroll down text when reach new line
-      /*if (typingDifficulty === 'sederhana' || typingDifficulty === 'sulit') {
-        const currentWordPosition = textDisplay.childNodes[currentWord].getBoundingClientRect();
-        const nextWordPosition = textDisplay.childNodes[currentWord + 1].getBoundingClientRect();
-        if (currentWordPosition.top < nextWordPosition.top) {
-          for (i = 0; i < currentWord + 1; i++) textDisplay.childNodes[i].style.display = 'none';
-        }
-      }*/
-
       // If it is not the last word increment currentWord,
       if (currentWord < wordList.length - 1) {
-        if (normalizeJawi(inputField.value) === wordList[currentWord]) {
+        if (normalizeJawi(inputField.value.slice(0,-1)) === wordList[currentWord]) {
           textDisplay.childNodes[currentWord].classList.add('correct');
           correctKeys += wordList[currentWord].length + 1;
         } else {
@@ -300,7 +294,7 @@ inputField.addEventListener('keydown', e => {
 
     // Else if it is the last word and input word is correct show the result
   } else if (currentWord === wordList.length - 1) {
-    if (normalizeJawi(inputField.value + e.key) === wordList[currentWord]) {
+    if (normalizeJawi(inputField.value) === wordList[currentWord]) {
       textDisplay.childNodes[currentWord].classList.add('correct');
       correctKeys += wordList[currentWord].length;
       currentWord++;
