@@ -270,7 +270,7 @@ inputField.addEventListener('keydown', e => {
 
 inputField.addEventListener('input', e => {
   // If it is the space key check the word and add correct/wrong class
-  if (inputField.value.slice(-1) == ' ') {
+  if (inputField.value.endsWith(" ")) {
     e.preventDefault();
 
     if (inputField.value !== '') {
@@ -293,7 +293,8 @@ inputField.addEventListener('input', e => {
     }
 
     // Else if it is the last word and input word is correct show the result
-  } else if (currentWord === wordList.length - 1) {
+  }
+  else if (currentWord === wordList.length - 1) {
     if (normalizeJawi(inputField.value) === wordList[currentWord]) {
       textDisplay.childNodes[currentWord].classList.add('correct');
       correctKeys += wordList[currentWord].length;
